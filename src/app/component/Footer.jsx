@@ -18,7 +18,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <div>
-      <div className="bg-black text-white text-center p-2">
+      <div className="bg-black text-white text-center p-2 lg:flex lg:items-center lg:justify-between lg:py-8 lg:px-10">
         <div className="flex justify-center">
           <svg
             width="88"
@@ -60,7 +60,7 @@ const Footer = () => {
             />
           </svg>
         </div>
-        <div>
+        <div className="lg:flex lg:items-center lg:justify-between gap-4">
           <div className="font-bold my-2">Suivez nous</div>
           <div className="flex gap-4 justify-around flex-wrap">
             <svg
@@ -263,9 +263,13 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="p-4">
-        {footerLinks.map((d) => (
-          <p key={d} className="py-2">
+      <div className="p-4 lg:flex lg:flex-wrap lg:gap-12">
+        {footerLinks.map((d, i) => (
+          <p
+            key={d}
+            className={`py-2 ${
+              i === footerLinks.length - 1 ? "inline-flex" : ""
+            }`}>
             {d}
           </p>
         ))}

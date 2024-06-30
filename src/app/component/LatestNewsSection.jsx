@@ -54,7 +54,7 @@ const LatestNewsSection = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-around items-center my-10">
+      <div className="flex justify-around items-center my-10 lg:justify-end lg:gap-4">
         <p className="font-bold text-lg text-center">
           Voir tous les communiqués de presse
         </p>

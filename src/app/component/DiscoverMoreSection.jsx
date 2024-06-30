@@ -39,15 +39,19 @@ export const DiscoverMoreSection = () => {
   return (
     <div>
       <p className="font-bold text-2xl">Découvrir plus</p>
-      {dummyData.map((d) => (
-        <Card
-          key={d.title}
-          media={d.media}
-          title={d.title}
-          description={d.description}
-          isVideo={d.isVideo}
-        />
-      ))}
+      <div className="lg:flex">
+        {dummyData.map((d) => (
+          <Card
+            key={d.title}
+            media={d.media}
+            title={d.title}
+            description={d.description}
+            isVideo={d.isVideo}
+            style={"lg:flex-col lg:h-full"}
+            special={true}
+          />
+        ))}
+      </div>
     </div>
   );
 };

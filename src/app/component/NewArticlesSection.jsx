@@ -30,28 +30,32 @@ const NewArticlesSection = () => {
   return (
     <div className="">
       <hr className="bg-slate-300 h-[1px]" />
-      <h1 className="text-2xl font-bold mt-4">Entreprise</h1>
-      <h1 className="text-2xl font-bold">Today</h1>
-      <div className="flex items-center gap-4">
-        <h2 className="font-bold">Lisez nos derniers articles</h2>
-        <svg
-          width="18"
-          height="16"
-          viewBox="0 0 18 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M17.6228 8.7627C18.1111 8.27441 18.1111 7.48145 17.6228 6.99316L11.3728 0.743164C10.8845 0.254883 10.0916 0.254883 9.60327 0.743164C9.11499 1.23145 9.11499 2.02441 9.60327 2.5127L13.7244 6.62988H1.73999C1.04858 6.62988 0.48999 7.18848 0.48999 7.87988C0.48999 8.57129 1.04858 9.12988 1.73999 9.12988H13.7205L9.60718 13.2471C9.1189 13.7354 9.1189 14.5283 9.60718 15.0166C10.0955 15.5049 10.8884 15.5049 11.3767 15.0166L17.6267 8.7666L17.6228 8.7627Z"
-            fill="#7A00E6"
-          />
-        </svg>
+      <div className="lg:flex lg:justify-between lg:items-center">
+        <div>
+          <h1 className="text-2xl font-bold mt-4">Entreprise</h1>
+          <h1 className="text-2xl font-bold">Today</h1>
+        </div>
+        <div className="flex items-center gap-4">
+          <h2 className="font-bold">Lisez nos derniers articles</h2>
+          <svg
+            width="18"
+            height="16"
+            viewBox="0 0 18 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.6228 8.7627C18.1111 8.27441 18.1111 7.48145 17.6228 6.99316L11.3728 0.743164C10.8845 0.254883 10.0916 0.254883 9.60327 0.743164C9.11499 1.23145 9.11499 2.02441 9.60327 2.5127L13.7244 6.62988H1.73999C1.04858 6.62988 0.48999 7.18848 0.48999 7.87988C0.48999 8.57129 1.04858 9.12988 1.73999 9.12988H13.7205L9.60718 13.2471C9.1189 13.7354 9.1189 14.5283 9.60718 15.0166C10.0955 15.5049 10.8884 15.5049 11.3767 15.0166L17.6267 8.7666L17.6228 8.7627Z"
+              fill="#7A00E6"
+            />
+          </svg>
+        </div>
       </div>
       <div className="my-8 flex gap-4 overflow-hidden">
         {dummyData.map((d) => (
           <NewArticleCard key={d.title} {...d} />
         ))}
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center lg:hidden">
         <div>1/3</div>
         <div className="flex gap-4">
           <svg

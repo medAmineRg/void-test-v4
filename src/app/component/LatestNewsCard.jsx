@@ -1,7 +1,7 @@
 const LatestNewsCard = ({ date, description }) => {
   return (
-    <div className="flex px-3 py-6">
-      <div>
+    <div className="flex justify-between px-3 py-6">
+      <div className="w-3/4">
         <p className="font-bold text-sm">{date}</p>
         <p className="font-bold text-lg my-4">{description}</p>
         <div className="flex items-center gap-2">
@@ -19,7 +19,7 @@ const LatestNewsCard = ({ date, description }) => {
           </svg>
         </div>
       </div>
-      <div className="self-end">
+      <div className="self-end lg:self-start">
         <svg
           width="44"
           height="45"

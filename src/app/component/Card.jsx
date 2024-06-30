@@ -10,7 +10,7 @@ export const Card = ({
   special,
 }) => {
   return (
-    <div className="px-2 my-8 lg:my-16 lg:flex-1">
+    <div className="px-2 my-8 lg:my-12 lg:flex-1">
       <div
         className={`border border-slate-300 rounded-xl lg:flex ${
           !special && " lg:border-0 lg:gap-16"

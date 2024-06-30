@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NewArticleCard = ({ media, date, title, description }) => {
   return (
-    <div className="rounded-xl border border-slate-300 overflow-hidden flex-shrink-0 w-[280px]">
+    <div className="rounded-xl border border-slate-300 overflow-hidden flex-shrink-0 w-[280px] lg:flex-1">
       <div className="relative h-[358px]">
         <Image
           src={media}
