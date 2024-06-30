@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const Card = ({ media, title, description, isVideo }) => {
+export const Card = ({ media, title, description, isVideo, isReverse }) => {
   return (
-    <div className="px-2 my-8">
-      <div className="border border-slate-300 rounded-xl lg:flex">
-        <div className="relative h-[358px] lg:w-1/2">
+    <div className="px-2 my-8 lg:my-16">
+      <div
+        className={`border border-slate-300 rounded-xl lg:flex lg:gap-16 lg:border-0 ${
+          isReverse && " lg:flex-row-reverse"
+        }`}>
+        <div className="relative h-[358px] lg:w-1/2 lg:h-[300px]">
           <Link href={"#"}>
             <Image
               src={media}
@@ -19,13 +22,13 @@ export const Card = ({ media, title, description, isVideo }) => {
                   src={"/play.png"}
                   fill
                   alt="play btn"
-                  className="object-fill"
+                  className="object-cover"
                 />
               </div>
             )}
           </Link>
         </div>
-        <div className="p-4 lg:w-1/2">
+        <div className="p-4 lg:w-1/2 lg:flex lg:flex-col lg:p-0 lg:gap-4">
           <Link href={"#"}>
             <h1 className="font-bold text-2xl">{title}</h1>
           </Link>

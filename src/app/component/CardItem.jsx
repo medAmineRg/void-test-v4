@@ -80,13 +80,14 @@ const dummyData = [
 export const CardItem = () => {
   return (
     <div>
-      {dummyData.map((data) => (
+      {dummyData.map((data, i) => (
         <Card
           key={data.title}
           media={data.media}
           title={data.title}
           description={data.description}
           isVideo={data.isVideo}
+          isReverse={i%2===0}
         />
       ))}
     </div>
