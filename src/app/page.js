@@ -1,4 +1,5 @@
 import { CardItem } from "./component/CardItem";
+import Carrier from "./component/Carrier";
 import { DiscoverMoreSection } from "./component/DiscoverMoreSection";
 import { Hero } from "./component/Hero";
 import LatestNewsSection from "./component/LatestNewsSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <NewArticlesSection />
       <LatestNewsSection />
       <DiscoverMoreSection />
+      <Carrier />
     </>
   );
 }

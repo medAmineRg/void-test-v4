@@ -47,11 +47,11 @@ const LatestNewsSection = () => {
       <h1 className="text-2xl font-bold my-8">Nos dernières informations</h1>
       <div>
         {dummyData.map((d, i) => (
-          <>
+          <div key={i}>
             <hr className="bg-slate-300 h-[1px]" />
             <LatestNewsCard {...d} />
             <hr className="bg-slate-300 h-[1px]" />
-          </>
+          </div>
         ))}
       </div>
       <div className="flex justify-around items-center my-10">

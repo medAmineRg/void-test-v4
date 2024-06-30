@@ -17,6 +17,13 @@ const dummyData = [
     dans le monde de la
     science`,
   },
+  {
+    media: "/people.png",
+    title: `Your Health`,
+    date: "27 Février 2024",
+    description: `Cancer et travail : Agir
+    ensemble`,
+  },
 ];
 
 const NewArticlesSection = () => {
