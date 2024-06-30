@@ -4,9 +4,9 @@ import Link from "next/link";
 export const Card = ({ media, title, description, isVideo }) => {
   return (
     <div className="px-2 my-8">
-      <div className="border border-slate-300 rounded-xl">
-        <Link href={"#"}>
-          <div className="relative h-[358px]">
+      <div className="border border-slate-300 rounded-xl lg:flex">
+        <div className="relative h-[358px] lg:w-1/2">
+          <Link href={"#"}>
             <Image
               src={media}
               fill
@@ -23,9 +23,9 @@ export const Card = ({ media, title, description, isVideo }) => {
                 />
               </div>
             )}
-          </div>
-        </Link>
-        <div className="p-4">
+          </Link>
+        </div>
+        <div className="p-4 lg:w-1/2">
           <Link href={"#"}>
             <h1 className="font-bold text-2xl">{title}</h1>
           </Link>
