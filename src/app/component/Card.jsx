@@ -1,20 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const Card = ({ media, title, description, isVideo, isReverse }) => {
+export const Card = ({
+  media,
+  title,
+  description,
+  isVideo,
+  style,
+  special,
+}) => {
   return (
-    <div className="px-2 my-8 lg:my-16">
+    <div className="px-2 my-8 lg:my-16 lg:flex-1">
       <div
-        className={`border border-slate-300 rounded-xl lg:flex lg:gap-16 lg:border-0 ${
-          isReverse && " lg:flex-row-reverse"
-        }`}>
-        <div className="relative h-[358px] lg:w-1/2 lg:h-[300px]">
+        className={`border border-slate-300 rounded-xl lg:flex ${
+          !special && " lg:border-0 lg:gap-16"
+        } ${style}`}>
+        <div
+          className={`relative h-[358px] ${
+            special ? "lg:w-full" : "lg:w-1/2"
+          } lg:h-[300px]`}>
           <Link href={"#"}>
             <Image
               src={media}
               fill
               alt="flag"
-              className="object-cover rounded-xl"
+              className={`object-cover ${
+                special ? "rounded-t-xl" : "rounded-xl"
+              }`}
             />
             {isVideo && (
               <div className="h-16 w-16 absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
@@ -28,11 +40,14 @@ export const Card = ({ media, title, description, isVideo, isReverse }) => {
             )}
           </Link>
         </div>
-        <div className="p-4 lg:w-1/2 lg:flex lg:flex-col lg:p-0 lg:gap-4">
+        <div
+          className={`p-4 ${
+            special ? "" : "lg:w-1/2"
+          } lg:flex lg:flex-col lg:gap-4`}>
           <Link href={"#"}>
             <h1 className="font-bold text-2xl">{title}</h1>
           </Link>
-          <p className="text-sm my-4">{description}</p>
+          <p className="text-sm my-4 lg:text-base">{description}</p>
           <div className="flex gap-4 items-center">
             <Link href={"#"} className="font-bold">
               En savoir plus

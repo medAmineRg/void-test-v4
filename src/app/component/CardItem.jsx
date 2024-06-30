@@ -33,53 +33,56 @@ const dummyData = [
     Vaskange et découvrez la signification de chaque
     couleur.`,
   },
+];
+
+const secondDummyData = [
   {
     media: "/talk.png",
     isVideo: true,
     title: `Virus VS Bacteria`,
     description: `Ils font partie de votre vie, mais les
-    connaissez-vous vraiment ? Nos
-    scientifiques vous expliquent les
-    principales différences entre un virus et
-    une bactérie.`,
+  connaissez-vous vraiment ? Nos
+  scientifiques vous expliquent les
+  principales différences entre un virus et
+  une bactérie.`,
   },
   {
     media: "/sanofi.png",
     title: `Le parcours B Corp de Notre
-    Santé Grand Public`,
+  Santé Grand Public`,
     description: `En obtenant la certification B Corp pour
-    Entreprise Santé Grand Public en Amérique du
-    Nord, en Allemagne, en Italie et en
-    Amérique latine, nous faisons partie d'une
-    communauté mondiale qui transforme le
-    monde des affaires en une force pour le
-    bien.`,
+  Entreprise Santé Grand Public en Amérique du
+  Nord, en Allemagne, en Italie et en
+  Amérique latine, nous faisons partie d'une
+  communauté mondiale qui transforme le
+  monde des affaires en une force pour le
+  bien.`,
   },
   {
     media: "/baby.png",
     isVideo: true,
     title: `Maladie du sommeil : Ne laisser
-    personne de côté`,
+  personne de côté`,
     description: `Maladie tropicale négligée, la maladie du
-    sommeil est généralement mortelle en
-    l'absence de traitement. Les patients
-    infectés par la variante la plus aiguë de la
-    maladie, le T.b rhodesiense, n'ont
-    malheureusement bénéficié que de peu
-    d'innovations en matière de traitement.
-    Mais l'espoir pointe à l'horizon. Pour ces
-    patients, nous voyons le potentiel du
-    premier traitement oral pour cette
-    variante de la maladie,
-    soutenant ainsi l'objectif d'élimination de
-    la maladie du sommeil chez l’humain d'ici
-    2030.`,
+  sommeil est généralement mortelle en
+  l'absence de traitement. Les patients
+  infectés par la variante la plus aiguë de la
+  maladie, le T.b rhodesiense, n'ont
+  malheureusement bénéficié que de peu
+  d'innovations en matière de traitement.
+  Mais l'espoir pointe à l'horizon. Pour ces
+  patients, nous voyons le potentiel du
+  premier traitement oral pour cette
+  variante de la maladie,
+  soutenant ainsi l'objectif d'élimination de
+  la maladie du sommeil chez l’humain d'ici
+  2030.`,
   },
 ];
 
 export const CardItem = () => {
   return (
-    <div>
+    <>
       {dummyData.map((data, i) => (
         <Card
           key={data.title}
@@ -87,9 +90,22 @@ export const CardItem = () => {
           title={data.title}
           description={data.description}
           isVideo={data.isVideo}
-          isReverse={i%2===0}
+          style={i % 2 === 0 && "lg:flex-row-reverse"}
         />
       ))}
-    </div>
+      <div className="lg:flex">
+        {secondDummyData.map((data, i) => (
+          <Card
+            key={data.title}
+            media={data.media}
+            title={data.title}
+            description={data.description}
+            isVideo={data.isVideo}
+            style={"lg:flex-col lg:h-full"}
+            special={true}
+          />
+        ))}
+      </div>
+    </>
   );
 };
