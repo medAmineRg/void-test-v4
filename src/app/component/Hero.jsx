@@ -12,7 +12,7 @@ export const Hero = () => {
           className="object-cover"
         />
       </div>
-      <div className="p-4 bg-white rounded-md w-[80%] z-10 absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 lg:w-[40%] lg:left-[400px] lg:-translate-x-1/3 lg:-translate-y-[30%] lg:py-8">
+      <div className="p-4 bg-white rounded-md w-[80%] z-10 absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 lg:w-[40%] lg:left-[400px] lg:-translate-x-1/2 lg:-translate-y-[40%] lg:py-8">
         <h1 className="font-bold text-3xl lg:text-4xl lg:leading-[3rem]">
           {`Journée des maladies rares 2024 : L'équité en action`}
         </h1>
