@@ -12,11 +12,11 @@ export const Hero = () => {
           className="object-cover"
         />
       </div>
-      <div className="p-4 bg-white rounded-md w-[80%] z-10 absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 lg:w-[40%]  lg:left-[300px] lg:-translate-x-1/3 lg:-translate-y-1/3 lg:py-6">
+      <div className="p-4 bg-white rounded-md w-[80%] z-10 absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 lg:w-[40%] lg:left-[400px] lg:-translate-x-1/3 lg:-translate-y-[30%] lg:py-8">
         <h1 className="font-bold text-3xl lg:text-4xl lg:leading-[3rem]">
           {`Journée des maladies rares 2024 : L'équité en action`}
         </h1>
-        <p className="my-3 text-sm text-gray-600 lg:my-4 ">
+        <p className="my-3 text-sm lg:text-base text-gray-600 lg:my-4 ">
           {`À l'occasion de la Journée des maladies rares, il est plus important
           que jamais de continuer à rechercher un diagnostic, une innovation, un
           soutien et un accès équitables pour les personnes atteintes de

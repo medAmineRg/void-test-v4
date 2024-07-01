@@ -267,9 +267,7 @@ const Footer = () => {
         {footerLinks.map((d, i) => (
           <p
             key={d}
-            className={`py-2 ${
-              i === footerLinks.length - 1 ? "inline-flex" : ""
-            }`}>
+            className={`py-2 ${i === footerLinks.length - 1 && "w-full"}`}>
             {d}
           </p>
         ))}
